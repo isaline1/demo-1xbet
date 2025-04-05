@@ -1,0 +1,43 @@
+<div id="popup-take-part" class="modal">
+  <div class="modal-content">
+    <span class="close"><img src="img/close.svg" alt="Закрыть" /></span>
+    <form id="contactForm">
+      <input type="text" id="name" name="name" placeholder="Name" required />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="E-mail"
+        required
+      />
+      <select id="messengervalue" name="messengervalue">
+        <option value="Telegram">Telegram</option>
+        <option value="WhatsApp">WhatsApp</option>
+      </select>
+      <input
+        type="text"
+        id="number"
+        name="telegram"
+        placeholder="TG/WA (optional)"
+        required
+      />
+      <select id="amount" name="amount">
+        <option value="Registration/deposit">Registration/deposit</option>
+        <option value="Affiliate program">Affiliate program</option>
+        <option value="Cash program">Cash program</option>
+      </select>
+      <div class="form-message">
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          placeholder="Message"
+          required
+        ></textarea>
+      </div>
+      <div class="submit-container">
+        <button class="submit-btn" type="submit">SEND IT!</button>
+      </div>
+    </form>
+  </div>
+</div>
