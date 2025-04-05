@@ -116,104 +116,142 @@ document.addEventListener("DOMContentLoaded", function () {
   checkScroll();
 });
 
-// открытие формы
+// открытие формы и отправка
+
 document.addEventListener("DOMContentLoaded", function () {
-  function loadHTML(className, fileName) {
-    const popupBlock = document.querySelector(`.${className}`);
-
-    fetch(fileName)
-      .then((response) => response.text())
-      .then((data) => {
-        popupBlock.innerHTML = data;
-
-        initializePopup();
-        addCustomHeader();
-      })
-      .catch((error) => {
-        console.error("Ошибка загрузки файла:", error);
+    function loadHTML(className, fileName) {
+      const popupBlock = document.querySelector(`.${className}`);
+  
+      fetch(fileName)
+        .then((response) => response.text())
+        .then((data) => {
+          popupBlock.innerHTML = data;
+  
+          initializePopup();
+          addCustomHeader();
+          initializeForm();  
+        })
+        .catch((error) => {
+          console.error("Ошибка загрузки файла:", error);
+        });
+    }
+  
+    function initializePopup() {
+      const modal = document.getElementById("popup-take-part");
+      const closeBtn = modal.querySelector(".close");
+  
+      document.querySelectorAll(".open-popup-link").forEach((link) => {
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
+          modal.style.display = "flex";
+          setTimeout(() => {
+            modal.classList.add("show");
+          }, 10);
+        });
       });
-  }
-
-  function initializePopup() {
-    const modal = document.getElementById("popup-take-part");
-    const closeBtn = modal.querySelector(".close");
-
-    document.querySelectorAll(".open-popup-link").forEach((link) => {
-      link.addEventListener("click", (event) => {
-        event.preventDefault();
-        modal.style.display = "flex";
-        setTimeout(() => {
-          modal.classList.add("show");
-        }, 10);
-      });
-    });
-
-    closeBtn.addEventListener("click", () => {
-      modal.classList.remove("show");
-      setTimeout(() => {
-        modal.style.display = "none";
-      }, 300);
-    });
-
-    window.addEventListener("click", (event) => {
-      if (event.target === modal) {
+  
+      closeBtn.addEventListener("click", () => {
         modal.classList.remove("show");
         setTimeout(() => {
           modal.style.display = "none";
         }, 300);
+      });
+  
+      window.addEventListener("click", (event) => {
+        if (event.target === modal) {
+          modal.classList.remove("show");
+          setTimeout(() => {
+            modal.style.display = "none";
+          }, 300);
+        }
+      });
+    }
+  
+    function addCustomHeader() {
+      const currentPath = decodeURIComponent(window.location.pathname);
+  
+      if (currentPath.endsWith("/cashagentship.html")) {
+        const form = document.getElementById("contactForm");
+        if (form) {
+          const header = document.createElement("h2");
+          header.textContent =
+            "Fill out the form and a personal manager will contact you";
+          header.classList.add("form-header");
+          form.insertBefore(header, form.firstChild);
+        }
       }
-    });
-
-    document
-      .getElementById("contactForm")
-      .addEventListener("submit", (event) => {
-        event.preventDefault();
-        alert("The form has been successfully submitted!");
-        modal.classList.remove("show");
-        setTimeout(() => {
-          modal.style.display = "none";
-        }, 300);
-      });
-  }
-
-  function addCustomHeader() {
-    const currentPath = decodeURIComponent(window.location.pathname);
-
-    if (currentPath.endsWith("/cashagentship.html")) {
+    }
+  
+    function initializeForm() {
       const form = document.getElementById("contactForm");
       if (form) {
-        const header = document.createElement("h2");
-        header.textContent =
-          "Fill out the form and a personal manager will contact you";
-        header.classList.add("form-header");
-        form.insertBefore(header, form.firstChild);
+        form.addEventListener("submit", function (e) {
+          e.preventDefault(); 
+          showSuccessPopup("Please wait, sending in progress");
+  
+          let formData = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            messengervalue: document.getElementById("messengervalue").value,
+            number: document.getElementById("number").value,
+            amount: document.getElementById("amount").value,
+            message: document.getElementById("message").value,
+          };
+  
+          fetch(
+            "https://script.google.com/macros/s/AKfycbyZ3hSK0JpB-qs61hwekX7MIMc3EBiczSJnEWXpwgSuiAShh5IG-pLshJw-Wqp5S61k3w/exec",
+            {
+              method: "POST",
+              mode: "no-cors",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(formData),
+            }
+          )
+            .then((response) => {
+              return response.text();
+            })
+            .then((data) => {
+              updateSuccessPopup("Thank you! The form has been sent successfully.");
+              const modal = document.getElementById("popup-take-part");
+              modal.classList.remove("show");
+              setTimeout(() => {
+                modal.style.display = "none";
+              }, 300);
+            })
+            .catch((error) => {
+              console.error("sending error:", error);
+              alert("sending error: " + error);
+              updateSuccessPopup("Error, please try again later.");
+            });
+        });
       }
     }
-  }
-  loadHTML("popup-block", "popup.html");
-});
-
-// отправка в гугл
-
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  let formData = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    messengervalue: document.getElementById("messengervalue").value,
-    number: document.getElementById("number").value,
-    amount: document.getElementById("amount").value,
-    message: document.getElementById("message").value,
-  };
-
-  fetch(
-    "https://script.google.com/macros/s/AKfycbyZ3hSK0JpB-qs61hwekX7MIMc3EBiczSJnEWXpwgSuiAShh5IG-pLshJw-Wqp5S61k3w/exec",
-    {
-      method: "POST",
-      mode: "no-cors",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
+  
+    function showSuccessPopup(message) {
+      const successPopup = document.createElement("div");
+      successPopup.classList.add("success-popup");
+  
+      const successMessage = document.createElement("p");
+      successMessage.textContent = message;
+      successPopup.appendChild(successMessage);
+  
+      document.body.appendChild(successPopup);
+  
+      setTimeout(() => {
+        successPopup.style.display = "none";
+      }, 5000);
     }
-  ).catch((error) => alert("Ошибка отправки: " + error));
-});
+  
+    function updateSuccessPopup(message) {
+      const successPopup = document.querySelector(".success-popup p");
+      if (successPopup) {
+        successPopup.textContent = message;
+      }
+    }
+  
+    loadHTML("popup-block", "popup.html");
+  });
+  
+  
+  
+  
