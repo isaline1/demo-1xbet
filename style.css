@@ -111,10 +111,12 @@ a {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(120deg,
-      transparent,
-      rgba(255, 255, 255, 0.5),
-      transparent);
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
   transform: skewX(-20deg);
   animation: shine 3s infinite;
   z-index: 1;
@@ -817,16 +819,14 @@ textarea::placeholder {
 }
 
 .success-popup button {
-  display: none; 
+  display: none;
 }
-
 
 /* ==================================================================
   адаптивы
 =================================================================== */
 
 @media (min-width: 940px) {
-
   .side-menu,
   .burger-icon {
     display: none;
@@ -908,7 +908,6 @@ textarea::placeholder {
 }
 
 @media (min-width: 1920px) {
-
   .header,
   .main-content {
     padding: 10px 180px;
@@ -1002,6 +1001,13 @@ textarea::placeholder {
 }
 
 @media (max-width: 939px) {
+  .animated-text,
+  .animated-text2 {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
   .menu-items {
     display: none;
   }
@@ -1117,7 +1123,7 @@ textarea::placeholder {
   }
 
   .product-list {
-    padding-top: 40px;
+    padding-top: 100px;
     margin-top: 30px;
     grid-template-columns: repeat(1, 1fr);
     gap: 60px;
@@ -1142,10 +1148,15 @@ textarea::placeholder {
     font-size: 4vh;
   }
 
-  .product-section,
   .product-section2,
   .product-section3 {
     text-align: center;
+  }
+
+  .product-section {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 20px;
   }
 
   .bonus-product-list {
@@ -1193,6 +1204,18 @@ textarea::placeholder {
     width: 40px;
     height: 40px;
   }
+
+  .product-section4 {
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
+.video-container > .title-block {
+  height: 40px;
+}
+.contact-title-block {
+  height: 30px;
+}
 }
 
 @media (min-width: 300px) and (max-width: 389px) {
@@ -1224,13 +1247,12 @@ textarea::placeholder {
   }
 
   .video-container {
-    padding-top: 100px;
-    padding-bottom: 50px;
+    padding-top: 60px;
+    padding-bottom: 40px;
   }
 
   iframe {
     width: 90%;
-    height: 35vh;
   }
 
   .winner-title {
@@ -1282,6 +1304,7 @@ textarea::placeholder {
 
   .product-section4 {
     padding-bottom: 30px;
+    padding-top: 20px;
   }
 
   .contacts-block {
@@ -1303,6 +1326,10 @@ textarea::placeholder {
 
   #contactForm {
     margin-top: 60px;
+  }
+
+  .product-list {
+    padding-top: 70px;
   }
 }
 
@@ -1337,12 +1364,14 @@ textarea::placeholder {
   }
 
   .product-section3 {
-    padding-top: 70px;
+    padding-top: 50px;
   }
 
   .video-container {
-    padding-top: 120px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
+
 
   .video-player-block {
     padding-top: 190px;
@@ -1350,17 +1379,8 @@ textarea::placeholder {
 
   iframe {
     width: 90%;
-    height: 30vh;
   }
 
-  .product-section4 {
-    padding-top: 120px;
-    padding-bottom: 50px;
-  }
-
-  .winners-list {
-    padding-top: 90px;
-  }
 
   .section-title2 {
     margin-right: 20px;
@@ -1388,6 +1408,7 @@ textarea::placeholder {
 
   .winners-list {
     gap: 30px;
+    padding-top: 120px;
   }
 
   .winner-info2 {
@@ -1406,5 +1427,9 @@ textarea::placeholder {
   .footer-items {
     gap: 10px 20px;
     grid-template-columns: 120px 170px;
+  }
+  .product-section {
+  
+    padding-bottom: 50px;
   }
 }
