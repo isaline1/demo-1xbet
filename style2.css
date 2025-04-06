@@ -195,7 +195,7 @@ a {
 }
 
 .main {
-  background-image: url(img/affiliate-main.jpg);
+  background-image: url(img/affiliate-main.webp);
 }
 
 .main-content {
@@ -247,7 +247,7 @@ a {
 }
 
 .product-section {
-  background-image: url(img/affiliate-bg.svg);
+  background-image: url(img/affiliate-bg.webp);
   padding-top: 80px;
 }
 
@@ -285,7 +285,7 @@ a {
 =================================================================== */
 
 .product-section4 {
-  background-image: url(img/affiliate-bg.svg);
+  background-image: url(img/affiliate-bg.webp);
   padding-top: 70px;
   text-align: left;
   padding-bottom: 80px;
@@ -395,7 +395,7 @@ img.partner-image {
 =================================================================== */
 
 .program-block {
-  background-image: url(img/program1.svg);
+  background-image: url(img/program1.webp);
   padding-top: 100px;
 }
 
@@ -484,12 +484,12 @@ img.product-image {
 }
 
 .program-block2 {
-  background-image: url(img/program2.svg);
+  background-image: url(img/program2.webp);
   padding-top: 10px;
 }
 
 .program-block3 {
-  background-image: url(img/program3.svg);
+  background-image: url(img/program3.webp);
 }
 
 .text-info-ol ol {
