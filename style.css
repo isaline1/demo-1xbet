@@ -1308,7 +1308,7 @@ textarea::placeholder {
 
 @media (min-width: 390px) and (max-width: 480px) {
   .main {
-    height: 80vh;
+    height: 80%;
   }
 
   .bonus-img {
