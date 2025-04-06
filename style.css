@@ -244,7 +244,7 @@ a {
 =================================================================== */
 
 .product-section {
-  background-image: url(img/twoback2.svg);
+  background-image: url(img/twoback2.jpg);
   padding-top: 80px;
   text-align: left;
 }
@@ -337,7 +337,7 @@ img.product-image:hover {
 =================================================================== */
 
 .product-section2 {
-  background-image: url(img/twobg.svg);
+  background-image: url(img/twobg.jpg);
   padding-top: 40px;
   text-align: left;
   padding-bottom: 140px;
@@ -369,7 +369,7 @@ img.product-image:hover {
 =================================================================== */
 
 .product-section4 {
-  background-image: url(img/winbg.svg);
+  background-image: url(img/winbg.jpg);
   padding-top: 70px;
   text-align: left;
   padding-bottom: 30px;
@@ -469,7 +469,7 @@ img.winner-image {
 =================================================================== */
 
 .video-container {
-  background-image: url(img/twoback2.svg);
+  background-image: url(img/twoback2.jpg);
   padding-top: 140px;
   text-align: center;
   padding-bottom: 100px;
