@@ -192,7 +192,7 @@ a {
 }
 
 .main {
-  background-image: url(img/background.png);
+  background-image: url(img/background.webp);
 }
 
 .main-content {
@@ -970,11 +970,11 @@ textarea::placeholder {
   }
 
   .bonus-img {
-    width: 35vh;
+    width: 35%;
   }
 
   .bonus-img2 {
-    width: 30vh;
+    width: 30%;
   }
 
   .main-content {
