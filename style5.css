@@ -1626,7 +1626,7 @@ textarea::placeholder {
   }
 
   .main-program-title {
-    margin-top: 220px;
+    margin-top: 260px;
   }
 
   .product-title {
@@ -1637,6 +1637,14 @@ textarea::placeholder {
 
 .text-content {
   margin-top: 50px;
+}
+
+.contact-title-block {
+  height: 30px;
+}
+
+.contact-container {
+  padding-top: 70px;
 }
 }
 
