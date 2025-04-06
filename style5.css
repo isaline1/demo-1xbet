@@ -198,12 +198,8 @@ a {
   padding-bottom: 70px;
 }
 
-.main {
-  background-image: url(img/affiliate-main.jpg);
-}
-
 .main2 {
-  background-image: url(img/cashagentship.jpg);
+  background-image: url(img/cashagentship.webp);
 }
 
 .main-content {
@@ -259,7 +255,7 @@ a {
 }
 
 .product-section {
-  background-image: url(img/affiliate-bg.svg);
+  background-image: url(img/affiliate-bg.webp);
   padding-top: 80px;
 }
 
@@ -297,7 +293,7 @@ a {
 =================================================================== */
 
 .product-section4 {
-  background-image: url(img/affiliate-bg.svg);
+  background-image: url(img/affiliate-bg.webp);
   padding-top: 70px;
   text-align: left;
   padding-bottom: 80px;
@@ -407,7 +403,7 @@ img.partner-image {
 =================================================================== */
 
 .program-block {
-  background-image: url(img/cashbg.svg) !important;
+  background-image: url(img/cashbg.svg);
   padding-top: 100px;
 }
 
@@ -511,15 +507,6 @@ img.product-image {
   left: 0;
   width: 100%;
   text-align: center;
-}
-
-.program-block2 {
-  background-image: url(img/program2.svg);
-  padding-top: 10px;
-}
-
-.program-block3 {
-  background-image: url(img/program3.svg);
 }
 
 .text-info-ol ol {
