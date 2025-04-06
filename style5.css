@@ -1628,6 +1628,16 @@ textarea::placeholder {
   .main-program-title {
     margin-top: 220px;
   }
+
+  .product-title {
+    margin-top: 0px;
+    height: 70px;
+    align-items: center;
+}
+
+.text-content {
+  margin-top: 50px;
+}
 }
 
 @media (min-width: 300px) and (max-width: 389px) {
@@ -1830,10 +1840,6 @@ textarea::placeholder {
   .footer-items {
     gap: 10px 20px;
     grid-template-columns: 120px 170px;
-  }
-
-  .text-content {
-    margin-top: 90px;
   }
 
   .info-block {
