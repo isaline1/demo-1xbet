@@ -1211,7 +1211,7 @@ textarea::placeholder {
 
 @media (max-width: 939px) {
 
-  .animated-text{
+  .animated-text, .animated-text2 {
     animation: none !important;
     transform: none !important;
     opacity: 1 !important;
@@ -1512,12 +1512,12 @@ textarea::placeholder {
   .product-block2 {
     display: flex;
     margin-bottom: 40px;
+    margin-top: 0;
   }
 
   .partner-list {
-    padding-top: 10px;
-    margin-top: 30px;
-  }
+    margin-top: 40px;
+}
 
   .product-section {
     text-align: center;
@@ -1700,7 +1700,7 @@ textarea::placeholder {
 
   .partner-list {
     gap: 30px;
-    margin-top: 0px;
+    margin-top: 30px;
   }
 
   .product-section4 {
@@ -1728,9 +1728,6 @@ textarea::placeholder {
     margin-top: 60px;
   }
 
-  .product-block {
-    margin-top: 40px;
-  }
 
   .text-content {
     margin-top: 50px;
