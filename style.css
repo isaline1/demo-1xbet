@@ -279,7 +279,7 @@ img.product-image,
   font-style: italic;
 }
 
-img.product-image:hover {
+.product-item:hover .product-image {
   outline: 2px solid #8bcb1e;
   border-radius: 60px;
   transform: scale(1.05);
@@ -360,11 +360,12 @@ img.product-image:hover {
   width: 40%;
 }
 
-.product-image-bonus-block:hover {
+.product-item:hover .product-image-bonus-block {
   outline: 2px solid #8bcb1e;
   border-radius: 40px;
   transform: scale(1.05);
 }
+
 
 /* ==================================================================
   пятый блок
