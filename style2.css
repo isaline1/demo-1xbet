@@ -1611,7 +1611,7 @@ textarea::placeholder {
 
   .partner-list {
     gap: 30px;
-    margin-top: 0px;
+    margin-top: 50px;
   }
 
   .product-section4 {
@@ -1640,11 +1640,11 @@ textarea::placeholder {
   }
 
   .product-block {
-    margin-top: 40px;
+    margin-top: 0px;
   }
 
   .text-content {
-    margin-top: 50px;
+    margin-top: 90px;
   }
 
   .info-block li {
