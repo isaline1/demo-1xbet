@@ -1664,6 +1664,9 @@ textarea::placeholder {
   .program-description {
     margin-top: 60px;
   }
+  .contact-container {
+    padding-top: 40px;
+}
 }
 
 @media (min-width: 390px) and (max-width: 480px) {
