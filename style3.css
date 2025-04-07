@@ -614,6 +614,14 @@ textarea::placeholder {
 }
 
 @media (max-width: 939px) {
+
+  .animated-text,
+  .animated-text2 {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
   .menu-items {
     display: none;
   }
@@ -754,6 +762,13 @@ textarea::placeholder {
     width: 40px;
     height: 40px;
   }
+
+  .title-block {
+    height: 40px;
+}
+.contact-title-block {
+  height: 40px;
+}
 }
 
 @media (min-width: 300px) and (max-width: 389px) {
@@ -773,7 +788,6 @@ textarea::placeholder {
 
   iframe {
     width: 90%;
-    height: 35vh;
   }
 
   .contacts-block {
@@ -796,6 +810,9 @@ textarea::placeholder {
   #contactForm {
     margin-top: 60px;
   }
+  .title-block {
+    height: 60px;
+}
 }
 
 @media (min-width: 390px) and (max-width: 480px) {
@@ -818,7 +835,6 @@ textarea::placeholder {
 
   iframe {
     width: 90%;
-    height: 30vh;
   }
 
   .contacts-content {
