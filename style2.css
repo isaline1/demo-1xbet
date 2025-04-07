@@ -1154,6 +1154,14 @@ textarea::placeholder {
 }
 
 @media (max-width: 939px) {
+
+  .animated-text,
+  .animated-text2 {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
   .menu-items {
     display: none;
   }
@@ -1526,6 +1534,22 @@ textarea::placeholder {
     width: 100%;
     padding: 30px 40px;
   }
+
+  .product-block {
+    margin-top: 0px;
+}
+.program-title {
+  height: 50px;
+}
+.video-container > .title-block {
+  height: 50px;
+}
+.contact-title-block {
+  height: 30px;
+}
+.contact-container {
+  padding-top: 0px;
+}
 }
 
 @media (min-width: 300px) and (max-width: 389px) {
@@ -1558,7 +1582,6 @@ textarea::placeholder {
 
   iframe {
     width: 90%;
-    height: 35vh;
   }
 
   .partner-title {
@@ -1678,11 +1701,10 @@ textarea::placeholder {
 
   iframe {
     width: 90%;
-    height: 30vh;
   }
 
   .product-section4 {
-    padding-top: 80px;
+    padding-top: 50px;
     padding-bottom: 70px;
   }
 
@@ -1707,6 +1729,7 @@ textarea::placeholder {
 
   .partner-list {
     gap: 30px;
+    padding-top: 40px;
   }
 
   .partner-info2 {
@@ -1728,8 +1751,8 @@ textarea::placeholder {
   }
 
   .text-content {
-    margin-top: 90px;
-  }
+    margin-top: 120px;
+}
 
   .info-block {
     width: 70%;
