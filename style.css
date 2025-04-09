@@ -496,7 +496,6 @@ img.winner-image {
 
 iframe {
   width: 60%;
-  height: 60vh;
   margin-bottom: 40px;
   border-radius: 50px;
 }
@@ -866,6 +865,10 @@ textarea::placeholder {
 @media (min-width: 1200px) {
   h2 {
     font-size: 5vh;
+  }
+  iframe {
+    width: 60%;
+    height: 60vh;
   }
 }
 

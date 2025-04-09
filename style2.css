@@ -544,7 +544,6 @@ img.product-image {
 
 iframe {
   width: 60%;
-  height: 60vh;
   margin-bottom: 40px;
   border-radius: 50px;
 }
@@ -932,6 +931,9 @@ textarea::placeholder {
   .text-info-ol {
     font-size: 13px;
     padding: 50px 30px 30px 50px;
+  }
+  iframe {
+    height: 60vh;
   }
 }
 
